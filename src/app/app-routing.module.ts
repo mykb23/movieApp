@@ -6,8 +6,7 @@ import {
   MovieDetailsComponent,
   MovieResolver
 } from './movies/index';
-// import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
-// import { MovieResolver } from './movies/movie-resolver.service';
+
 import { Error404Component } from './movies/errors/404.component';
 
 const routes: Routes = [

@@ -1,29 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { MiniMovieAppComponent } from './mini-movie-app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { AppRoutingModule } from "./app-routing.module";
+import { MiniMovieAppComponent } from "./mini-movie-app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HttpClientModule, HttpClientJsonpModule } from "@angular/common/http";
 
 import {
   MoviesListComponent,
   MoviesService,
   MovieListResolver,
-  SlidesComponent,
   MovieDetailsComponent,
-  MovieResolver
-} from './movies/index';
-import { NavigationComponent } from './navigation/navigation.component';
-import { FormsModule } from '@angular/forms';
+  MovieResolver,
+  Error404Component
+} from "./movies/index";
+import { NavigationComponent } from "./navigation/navigation.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     MiniMovieAppComponent,
     MoviesListComponent,
-    SlidesComponent,
     MovieDetailsComponent,
-    NavigationComponent
+    NavigationComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
