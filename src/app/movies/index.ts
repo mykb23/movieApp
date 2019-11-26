@@ -1,0 +1,6 @@
+export * from './movies-list.component';
+export * from './movies-list-resolver.service';
+export * from './movie-resolver.service';
+export * from './slides.component';
+export * from './shared/index';
+export * from './movie-details/index';

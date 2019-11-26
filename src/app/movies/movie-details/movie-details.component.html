@@ -1,0 +1,67 @@
+<section>
+  <div></div>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-12 mt-3 mb-4">
+        <input
+          type="button"
+          value="Go Back"
+          class="btn btn-outline-primary float-left"
+          (click)="back()"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5 col-md-6">
+        <img
+          src="http://image.tmdb.org/t/p/w185/{{ movie?.poster_path }}"
+          alt="{{ movie?.title }}"
+          class="card-img border-bottom-0w-100 h-100 img-fluid movie-image"
+          style="max-height: 400px;"
+        />
+      </div>
+      <div class="col-7 col-md-6 py-1 pr-4">
+        <h2 class="pt-1">{{ movie?.title }}</h2>
+        <h5>
+          Releasd Date:<small>
+            {{ movie?.release_date }}
+          </small>
+        </h5>
+        <h5>
+          Runtime:<small>
+            {{ movie?.runtime }}
+          </small>
+        </h5>
+
+        <div style="font-size: 16px;">
+          <span
+            class="badge badge-info rounded-5 ml-1"
+            *ngFor="let genre of movie?.genres"
+            >{{ genre.name }}</span
+          >
+        </div>
+        <h5>
+          Language:<small>
+            {{ movie?.original_language }}
+          </small>
+        </h5>
+        <h5>
+          Subtitles:
+          <span
+            class="badge badge-info rounded-5 ml-1"
+            *ngFor="let subtitle of movie?.spoken_languages"
+            >{{ subtitle.name }}
+          </span>
+        </h5>
+        <i>{{ movie?.status }}</i>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 pt-5">
+        <h3>Overview</h3>
+        <p>{{ movie?.overview }}</p>
+      </div>
+    </div>
+  </div>
+</section>

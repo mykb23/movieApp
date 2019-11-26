@@ -1,0 +1,77 @@
+<section>
+  <div class="jumbotron jumbotron-fluid">
+    <!-- <form class="container"> -->
+    <!-- <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">
+        This is a modified jumbotron that occupies the entire horizontal space
+        of its parent.
+      </p> -->
+    <!-- <form class="form" id="searchForm"> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <div class="form-row">
+            <div class="form-group col-10 offset-1 mt-5">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Search Movies"
+                aria-label="Search"
+                (keyup)="searchMovies(search.value)"
+                #search
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <ng-container *ngIf="searchMoviesResult; else elseTemplate">
+        <div class="col-lg-3 mt-4" *ngFor="let movie of searchMoviesResult">
+          <div
+            class="card shadow border-0"
+            [routerLink]="['/movies', movie.id]"
+          >
+            <img
+              src="http://image.tmdb.org/t/p/w185/{{ movie.poster_path }}"
+              class="card-img-top"
+              alt="{{ movie.title }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="font-size:16px;">
+                {{ movie.title }}
+              </h5>
+              <p class="card-text">
+                {{ movie.release_date.slice(0, 4) }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <div class="col-lg-3 mt-4" *ngFor="let movie of movies">
+          <div
+            class="card shadow border-0"
+            [routerLink]="['/movies', movie.id]"
+          >
+            <img
+              src="http://image.tmdb.org/t/p/w185/{{ movie.poster_path }}"
+              class="card-img-top"
+              alt="{{ movie.title }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="font-size:16px;">
+                {{ movie.title }}
+              </h5>
+              <p class="card-text">
+                {{ movie.release_date.slice(0, 4) }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>
