@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { MoviesService } from './shared/movies.service';
-import { IMovie } from './shared/movie.model';
+import { Component, OnInit } from "@angular/core";
+import { MoviesService } from "./shared/movies.service";
+import { IMovie } from "./shared/movie.model";
 
 @Component({
-  templateUrl: './movies-list.component.html',
+  templateUrl: "./movies-list.component.html",
   styles: [
     `
       .jumbotron {
@@ -12,8 +12,6 @@ import { IMovie } from './shared/movie.model';
       }
       .card {
         background: transparent !important;
-        // color: white;
-        // text-align: center;
         cursor: pointer;
       }
     `
