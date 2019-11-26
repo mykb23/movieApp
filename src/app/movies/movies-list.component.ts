@@ -29,7 +29,6 @@ export class MoviesListComponent implements OnInit {
   getMovies(): void {
     this.movieService.getDiscoverMovies().subscribe(results => {
       this.movies = results;
-      // console.log(this.movies);
     });
   }
 
